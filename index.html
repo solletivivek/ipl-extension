@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Data</title>
+</head>
+<body>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 400px; /* Set your desired width here */
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#matches {
+    display: inline-block;
+    text-align: left;
+}
+
+#matches li {
+    padding: 5px 0;
+}
+
+/* ... rest of your CSS ... */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#matches {
+    display: inline-block;
+    text-align: left;
+}
+
+#matches li {
+    padding: 5px 0;
+}
+
+@keyframes starShape {
+    0% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: scale(1); }
+}
+
+.star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    background: white;
+    transform-origin: center;
+    animation: starShape 2s ease-out forwards;
+}
+
+/* Add styles for stars to create cricket shape here */
+/* This is just an example, you may need to adjust positions */
+.star-1 { top: 50%; left: 48%; animation-delay: 0.1s; }
+.star-2 { top: 52%; left: 52%; animation-delay: 0.2s; }
+/* ... More stars to shape the cricket ... */
+
+
+    </style>
+    <h1>IPL Data</h1>
+    <ul>
+        <li id="matches"></li>
+    </ul>
+    <script src="script.js"></script>
+
+    <script>
+function createStar() {
+    const star = document.createElement('div');
+    star.className = 'star';
+    return star;
+}
+
+function displayStars() {
+    for (let i = 1; i <= 10; i++) { // 10 is an arbitrary number of stars
+        const star = createStar();
+        star.classList.add(`star-${i}`);
+        document.body.appendChild(star);
+    }
+}
+
+displayStars();
+setTimeout(getMatchData, 2000); // Load data after 2 seconds
+
+
+
+    </script>
+</body>
+</html>
